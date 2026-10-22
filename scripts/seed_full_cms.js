@@ -17,7 +17,7 @@ const allPages = [
       hero: {
         badge: "Growth Engineering",
         primaryCta: "Book Growth Audit",
-        secondaryCta: "Call Us: +91 82404 18456",
+        secondaryCta: "Call Us: +91 87770 18187",
         image: "/hero-strategy-map.png"
       },
       sections: ["Hero", "SignatureDivider", "ROI Services", "Case Studies", "Manifesto", "Capabilities", "Testimonials", "CTA"]

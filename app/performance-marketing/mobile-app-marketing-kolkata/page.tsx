@@ -98,7 +98,7 @@ export default function MobileAppMarketingKolkataPage() {
                 </button>
 
                 <a
-                  href="tel:+918240418456"
+                  href="tel:+918777018187"
                   className="rr-btn-underline text-sm text-gray-300 hover:text-white inline-flex items-center gap-2"
                 >
                   <Phone className="w-4 h-4 text-[#E8B626]" />

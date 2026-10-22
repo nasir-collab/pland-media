@@ -137,29 +137,60 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
-            ? "bg-[#0c0c0c]/92 backdrop-blur-xl border-b border-white/[0.08] py-3 shadow-[0_12px_40px_rgba(0,0,0,0.65)]"
-            : "bg-gradient-to-b from-[#0c0c0c]/85 via-[#0c0c0c]/40 to-transparent backdrop-blur-[6px] border-b border-white/[0.04] py-3.5 sm:py-4"
+            ? "bg-[#0c0c0c]/95 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_12px_40px_rgba(0,0,0,0.65)]"
+            : "bg-gradient-to-b from-[#0c0c0c]/95 via-[#0c0c0c]/70 to-transparent backdrop-blur-[6px] border-b border-white/[0.04]"
         }`}
       >
-        {/* Subtle Ambient Gold Hairline Glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-[#E8B626]/40 to-transparent pointer-events-none" />
+        {/* Top Utility Contact Bar - High contrast, clickable phone & email at the very top */}
+        <div className="bg-[#080808]/95 border-b border-white/[0.06] py-1.5 px-3 sm:px-6 text-[11px] sm:text-xs font-mono text-gray-300">
+          <div className="rr-container-1650 flex items-center justify-between gap-3">
+            <div className="flex items-center gap-4 sm:gap-6 w-full sm:w-auto justify-between sm:justify-start">
+              <a
+                href="tel:+918777018187"
+                className="inline-flex items-center gap-1.5 text-gray-200 hover:text-[#E8B626] transition-colors group cursor-pointer"
+                aria-label="Call Plan D Media at +91 87770 18187"
+              >
+                <Phone className="w-3 h-3 text-[#E8B626] group-hover:scale-110 transition-transform" />
+                <span className="font-medium tracking-tight">+91 87770 18187</span>
+              </a>
 
-        <div className="rr-container-1650">
-          <div className="flex items-center justify-between gap-4">
-            {/* 1. Left: Brand Logo */}
-            <div className="flex items-center gap-4 shrink-0">
-              <Link href="/" className="flex items-center group relative py-1">
-                <Image
-                  src="/logo.png?v=authentic"
-                  alt="Plan D Media - Digital Done Right"
-                  width={260}
-                  height={50}
-                  priority
-                  unoptimized
-                  className="h-8 sm:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
-                />
-              </Link>
+              <a
+                href="mailto:info@pland.in"
+                className="inline-flex items-center gap-1.5 text-gray-200 hover:text-[#E8B626] transition-colors group cursor-pointer"
+                aria-label="Email Plan D Media at info@pland.in"
+              >
+                <Mail className="w-3 h-3 text-[#E8B626] group-hover:scale-110 transition-transform" />
+                <span className="font-medium tracking-tight">info@pland.in</span>
+              </a>
             </div>
+
+            <div className="hidden lg:flex items-center gap-2 text-[10px] text-gray-400">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span>Priority Consultation Desk • Mon–Sat 10 AM–7 PM IST</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Subtle Ambient Gold Hairline Glow */}
+        <div className="absolute top-[29px] left-1/2 -translate-x-1/2 w-3/4 max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-[#E8B626]/40 to-transparent pointer-events-none" />
+
+        <div className="py-2.5 sm:py-3 relative">
+          <div className="rr-container-1650">
+            <div className="flex items-center justify-between gap-4">
+              {/* 1. Left: Brand Logo */}
+              <div className="flex items-center gap-4 shrink-0">
+                <Link href="/" className="flex items-center group relative py-1">
+                  <Image
+                    src="/logo.png?v=authentic"
+                    alt="Plan D Media - Digital Done Right"
+                    width={260}
+                    height={50}
+                    priority
+                    unoptimized
+                    className="h-8 sm:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                  />
+                </Link>
+              </div>
 
             {/* 2. Center: Luxury Floating Island Navigation Capsule */}
             <nav className="hidden xl:flex items-center gap-0.5 bg-white/[0.03] border border-white/[0.08] hover:border-white/[0.12] rounded-full p-1.5 backdrop-blur-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.08)] transition-all">
@@ -447,13 +478,13 @@ export default function Header() {
             <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
               {/* Separate, Non-Colliding Phone Pill */}
               <a
-                href="tel:+918240418456"
+                href="tel:+918777018187"
                 className="hidden 2xl:flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.08] hover:border-[#E8B626]/40 hover:bg-white/[0.06] text-xs font-mono text-gray-300 hover:text-white transition-all whitespace-nowrap group"
               >
                 <div className="w-5 h-5 rounded-full bg-[#E8B626]/15 flex items-center justify-center text-[#E8B626] group-hover:bg-[#E8B626] group-hover:text-black transition-colors">
                   <Phone className="w-2.5 h-2.5" />
                 </div>
-                <span className="tracking-tight font-medium">+91 82404 18456</span>
+                <span className="tracking-tight font-medium">+91 87770 18187</span>
               </a>
 
               {/* Premium High-Gloss Gradient CTA Button - Visible on md+ screens */}
@@ -479,7 +510,8 @@ export default function Header() {
             </div>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
 
       {/* Offcanvas Side Drawer matching Whiteboard Media <aside class="side-info"> */}
       {mobileMenuOpen && (
@@ -687,28 +719,16 @@ export default function Header() {
 
               <div className="flex items-center gap-3 text-xs text-gray-300">
                 <Mail className="w-4 h-4 text-[#E8B626] shrink-0" />
-                <div className="flex gap-2">
-                  <a href="mailto:info@pland.in" className="hover:text-white transition-colors">
-                    info@pland.in
-                  </a>
-                  <span>•</span>
-                  <a href="mailto:contact@pland.in" className="hover:text-white transition-colors">
-                    contact@pland.in
-                  </a>
-                </div>
+                <a href="mailto:info@pland.in" className="hover:text-white transition-colors">
+                  info@pland.in
+                </a>
               </div>
 
               <div className="flex items-center gap-3 text-xs text-gray-300">
                 <Phone className="w-4 h-4 text-[#E8B626] shrink-0" />
-                <div className="flex gap-2 font-mono">
-                  <a href="tel:+918777018187" className="hover:text-white transition-colors">
-                    +91 87770 18187
-                  </a>
-                  <span>/</span>
-                  <a href="tel:+918240418456" className="hover:text-white transition-colors">
-                    82404 18456
-                  </a>
-                </div>
+                <a href="tel:+918777018187" className="hover:text-white transition-colors font-mono font-medium">
+                  +91 87770 18187
+                </a>
               </div>
 
               <div className="pt-2">

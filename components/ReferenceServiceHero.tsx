@@ -112,11 +112,11 @@ export default function ReferenceServiceHero({
                   </button>
 
                   <a
-                    href="tel:+918240418456"
+                    href="tel:+918777018187"
                     className="rr-btn-underline text-sm font-medium text-gray-300 hover:text-white flex items-center gap-2"
                   >
                     <Phone className="w-4 h-4 text-[#E8B626]" />
-                    <span>Call Us: +91 82404 18456</span>
+                    <span>Call Us: +91 87770 18187</span>
                   </a>
                 </div>
               </div>

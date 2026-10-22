@@ -130,7 +130,16 @@ export default function Footer() {
               Ecospace Business Park, Premises No. 02-0345, Plot No. IIF/11, Action Area II, New Town, Kolkata, West Bengal 700160, India
             </p>
             <p className="text-xs text-gray-400 font-mono">
-              Direct: +91 82404 18456
+              Direct:{" "}
+              <a href="tel:+918777018187" className="text-[#E8B626] hover:underline">
+                +91 87770 18187
+              </a>
+            </p>
+            <p className="text-xs text-gray-400 font-mono">
+              Email:{" "}
+              <a href="mailto:info@pland.in" className="text-[#E8B626] hover:underline">
+                info@pland.in
+              </a>
             </p>
           </div>
         </div>

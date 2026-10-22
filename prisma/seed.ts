@@ -29,8 +29,8 @@ async function main() {
     { key: "site_name", value: "Plan D Media" },
     { key: "legal_name", value: "LEADTECH PLAN D MEDIA (OPC) PRIVATE LIMITED" },
     { key: "site_tagline", value: "AI-First Performance Marketing & Growth Studio" },
-    { key: "phone", value: "+91 82404 18456" },
-    { key: "email", value: "contact@pland.in" },
+    { key: "phone", value: "+91 87770 18187" },
+    { key: "email", value: "info@pland.in" },
     {
       key: "address",
       value: "Ecospace Business Park, Premises No. 701, Action Area II, New Town, Kolkata, West Bengal 700160, India",

@@ -74,7 +74,7 @@ Key Deliverables:
    - Formatted editorial articles with author credits, reading times, tags, and related playbooks.
 9. **Contact Us (`/contact`)**:
    - Corporate office details at Ecospace Business Park, New Town, Kolkata.
-   - Direct telephone (+91 82404 18456) and electronic mail (contact@pland.in).
+   - Direct telephone (+91 87770 18187) and electronic mail (info@pland.in).
    - Real-time consultation and campaign audit request form.
 10. **Legal & System Pages**:
     - Privacy Policy (`/privacy-policy`)

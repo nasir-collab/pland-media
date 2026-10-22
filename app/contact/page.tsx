@@ -107,10 +107,10 @@ export default function ContactPage() {
                   <div>
                     <div className="text-white font-bold text-sm mb-1">Direct Telephone &amp; WhatsApp</div>
                     <a
-                      href="tel:+918240418456"
+                      href="tel:+918777018187"
                       className="text-xs text-[#E8B626] hover:underline block font-mono"
                     >
-                      +91 82404 18456
+                      +91 87770 18187
                     </a>
                     <div className="text-[11px] text-gray-500 mt-1 font-mono">
                       Priority response within 4 hours
@@ -125,10 +125,10 @@ export default function ContactPage() {
                   <div>
                     <div className="text-white font-bold text-sm mb-1">Electronic Inquiries</div>
                     <a
-                      href="mailto:contact@pland.in"
+                      href="mailto:info@pland.in"
                       className="text-xs text-[#E8B626] hover:underline block font-mono"
                     >
-                      contact@pland.in
+                      info@pland.in
                     </a>
                     <div className="text-[11px] text-gray-500 mt-1 font-mono">
                       For RFPs, partnerships, and executive briefings

@@ -45,11 +45,11 @@ export default function ReferenceCtaBanner({
           </button>
 
           <a
-            href="tel:+918240418456"
+            href="tel:+918777018187"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-white font-medium text-xs uppercase tracking-wider transition-all"
           >
             <Phone className="w-4 h-4 text-[#E8B626]" />
-            <span>Call +91 82404 18456</span>
+            <span>Call +91 87770 18187</span>
           </a>
         </div>
       </div>
