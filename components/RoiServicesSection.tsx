@@ -378,12 +378,16 @@ export default function RoiServicesSection() {
             </div>
 
             <div className="pt-4 border-t border-white/10 flex items-center justify-between gap-4">
-              <span className="text-xs font-mono text-[#E8B626]">
-                {selectedService.badge}
-              </span>
+              <button
+                type="button"
+                onClick={() => setSelectedService(null)}
+                className="px-4 py-2.5 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 text-xs font-mono text-gray-300 hover:text-white transition-colors cursor-pointer"
+              >
+                ✕ Close
+              </button>
               <Link
                 href="/contact"
-                className="px-5 py-2.5 rounded-xl bg-[#E8B626] hover:bg-[#F3C84B] text-white font-bold text-xs transition-colors"
+                className="px-5 py-2.5 rounded-xl bg-[#E8B626] hover:bg-[#F3C84B] text-black font-extrabold text-xs transition-colors"
               >
                 Book Strategy Call →
               </Link>

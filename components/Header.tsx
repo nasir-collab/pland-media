@@ -456,24 +456,25 @@ export default function Header() {
                 <span className="tracking-tight font-medium">+91 82404 18456</span>
               </a>
 
-              {/* Premium High-Gloss Gradient CTA Button */}
+              {/* Premium High-Gloss Gradient CTA Button - Visible on md+ screens */}
               <button
                 type="button"
                 onClick={() => setModalOpen(true)}
-                className="relative group overflow-hidden px-5 sm:px-6 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-[#E8B626] via-[#F3C84B] to-[#E8B626] bg-[length:200%_auto] text-black font-extrabold text-[11px] sm:text-xs uppercase tracking-wider hover:bg-right transition-all duration-500 shadow-[0_0_20px_rgba(232,182,38,0.25)] hover:shadow-[0_0_30px_rgba(232,182,38,0.45)] hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2 whitespace-nowrap cursor-pointer shrink-0"
+                className="hidden md:flex relative group overflow-hidden px-5 sm:px-6 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-[#E8B626] via-[#F3C84B] to-[#E8B626] bg-[length:200%_auto] text-black font-extrabold text-[11px] sm:text-xs uppercase tracking-wider hover:bg-right transition-all duration-500 shadow-[0_0_20px_rgba(232,182,38,0.25)] hover:shadow-[0_0_30px_rgba(232,182,38,0.45)] hover:scale-[1.02] active:scale-[0.98] items-center gap-2 whitespace-nowrap cursor-pointer shrink-0"
               >
                 <span>Free Consultation</span>
                 <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </button>
 
-              {/* Refined Circular Hamburger Drawer Trigger */}
+              {/* Prominent High-Visibility Hamburger Menu Button (Always visible on mobile & desktop) */}
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white/[0.04] border border-white/10 hover:border-white/25 hover:bg-white/10 text-gray-300 hover:text-white transition-all cursor-pointer shrink-0 shadow-sm"
+                className="flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/[0.08] hover:bg-white/[0.16] border border-white/20 hover:border-[#E8B626]/50 text-white transition-all cursor-pointer shrink-0 shadow-lg active:scale-95 group"
                 aria-label="Open navigation menu"
               >
-                <Menu className="w-4 h-4 sm:w-5 sm:h-5" />
+                <Menu className="w-4 h-4 sm:w-5 sm:h-5 text-[#E8B626] group-hover:scale-110 transition-transform" />
+                <span className="text-xs font-mono font-bold tracking-wider uppercase text-white">Menu</span>
               </button>
             </div>
           </div>
@@ -485,30 +486,32 @@ export default function Header() {
         <div className="fixed inset-0 z-50 flex justify-end">
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black/80 backdrop-blur-md transition-opacity"
+            className="fixed inset-0 bg-black/80 backdrop-blur-md transition-opacity cursor-pointer"
             onClick={() => setMobileMenuOpen(false)}
+            title="Click outside to close menu"
           />
 
           {/* Drawer Body */}
-          <div className="relative w-full max-w-md bg-[#141414] border-l border-white/10 h-full p-8 flex flex-col justify-between overflow-y-auto z-10 animate-in slide-in-from-right duration-300 shadow-2xl">
+          <div className="relative w-full max-w-md bg-[#141414] border-l border-white/10 h-full p-6 sm:p-8 flex flex-col justify-between overflow-y-auto z-10 animate-in slide-in-from-right duration-300 shadow-2xl">
             <div>
-              {/* Drawer Header */}
-              <div className="flex items-center justify-between pb-6 border-b border-white/10">
+              {/* Sticky Drawer Header */}
+              <div className="sticky top-0 bg-[#141414]/95 backdrop-blur-xl -mt-6 sm:-mt-8 -mx-6 sm:-mx-8 px-6 sm:px-8 pt-6 pb-5 border-b border-white/10 z-20 flex items-center justify-between">
                 <Image
                   src="/logo.png?v=authentic"
                   alt="Plan D Media"
                   width={200}
                   height={38}
                   unoptimized
-                  className="h-8 w-auto object-contain"
+                  className="h-7 sm:h-8 w-auto object-contain"
                 />
                 <button
                   type="button"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="w-9 h-9 flex items-center justify-center text-gray-400 hover:text-white rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-colors cursor-pointer"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs font-mono font-bold transition-all cursor-pointer active:scale-95"
                   aria-label="Close menu"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-4 h-4 text-[#E8B626]" />
+                  <span>Close</span>
                 </button>
               </div>
 
@@ -684,16 +687,28 @@ export default function Header() {
 
               <div className="flex items-center gap-3 text-xs text-gray-300">
                 <Mail className="w-4 h-4 text-[#E8B626] shrink-0" />
-                <a href="mailto:contact@pland.in" className="hover:text-white transition-colors">
-                  contact@pland.in
-                </a>
+                <div className="flex gap-2">
+                  <a href="mailto:info@pland.in" className="hover:text-white transition-colors">
+                    info@pland.in
+                  </a>
+                  <span>•</span>
+                  <a href="mailto:contact@pland.in" className="hover:text-white transition-colors">
+                    contact@pland.in
+                  </a>
+                </div>
               </div>
 
               <div className="flex items-center gap-3 text-xs text-gray-300">
                 <Phone className="w-4 h-4 text-[#E8B626] shrink-0" />
-                <a href="tel:+918240418456" className="hover:text-white transition-colors">
-                  +91 82404 18456
-                </a>
+                <div className="flex gap-2 font-mono">
+                  <a href="tel:+918777018187" className="hover:text-white transition-colors">
+                    +91 87770 18187
+                  </a>
+                  <span>/</span>
+                  <a href="tel:+918240418456" className="hover:text-white transition-colors">
+                    82404 18456
+                  </a>
+                </div>
               </div>
 
               <div className="pt-2">
