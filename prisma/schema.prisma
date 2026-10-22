@@ -1,0 +1,116 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  password  String
+  role      String   @default("ADMIN")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Service {
+  id               String   @id @default(cuid())
+  title            String
+  slug             String   @unique
+  tagline          String
+  shortDescription String
+  fullDescription  String
+  icon             String
+  category         String   @default("Digital Marketing")
+  order            Int      @default(0)
+  featured         Boolean  @default(false)
+  status           String   @default("PUBLISHED")
+  deliverables     String
+  keyMetrics       String
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+model CaseStudy {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  client      String
+  industry    String
+  challenge   String
+  solution    String
+  results     String
+  tags        String
+  image       String
+  featured    Boolean  @default(false)
+  status      String   @default("PUBLISHED")
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Post {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  excerpt     String
+  content     String
+  coverImage  String
+  category    String
+  authorName  String   @default("Plan D Editorial Team")
+  readTime    String   @default("5 min read")
+  tags        String
+  status      String   @default("PUBLISHED")
+  publishedAt DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Lead {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String
+  company   String?
+  service   String?
+  budget    String?
+  message   String
+  status    String   @default("NEW")
+  notes     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Page {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  heroHeading String?
+  heroSub     String?
+  metaTitle   String?
+  metaDesc    String?
+  content     String?
+  status      String   @default("PUBLISHED")
+  updatedAt   DateTime @updatedAt
+}
+
+model GlobalSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
+model Media {
+  id        String   @id @default(cuid())
+  name      String
+  url       String
+  mimeType  String
+  size      Int
+  altText   String?
+  createdAt DateTime @default(now())
+}

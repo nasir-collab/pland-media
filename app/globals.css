@@ -1,26 +1,114 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --primary: #111111;
+  --secondary: #999999;
+  --theme: #E8B626;
+  --theme-hover: #F3C84B;
+  --border: rgba(255, 255, 255, 0.1);
+  --bg: #111111;
+  --bg-card: #171717;
+  --bg-card-hover: #1f1f1f;
+  --black: #111111;
+  --white: #FFFFFF;
+  --action: #E8B626;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--white);
+  font-family: var(--font-dm-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  selection-background-color: #E8B626;
+  selection-color: #000000;
 }
+
+::selection {
+  background-color: #E8B626;
+  color: #000000;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E8B626;
+}
+
+/* Whiteboard Media Signature Underline Link */
+.rr-btn-underline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.875rem;
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid #E8B626;
+  transition: all 0.3s ease;
+}
+.rr-btn-underline:hover {
+  color: #E8B626;
+  border-bottom-color: #FFFFFF;
+  padding-left: 4px;
+}
+
+/* Parenthetical Tag - e.g. (Who we are), (Projects), (Capabilities) */
+.tag-parenthesis {
+  color: #E8B626;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Subtle editorial grid line */
+.divider-subtle {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Infinite Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Whiteboard Media Container & Typography */
+.rr-container-1650 {
+  max-width: 1650px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .rr-container-1650 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.text-stroke-title {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.4);
+  color: transparent;
+}
+
